@@ -1,0 +1,18 @@
+doctype html
+
+block vars
+
+html(lang="ja")
+  head
+    include ../include/_head
+
+  body(class=key)
+    include ../include/_header
+    include ../include/_nav
+
+    block contents
+
+    include ../include/_footer
+
+    script(src=jsPath + page.script)
+

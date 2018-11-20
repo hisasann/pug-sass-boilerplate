@@ -1,0 +1,32 @@
+{
+  "name": "pug-sass-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run gulp\" \"npm run webpack\"",
+    "gulp": "gulp gulpt",
+    "webpack": "cross-env NODE_ENV=development webpack --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "globule": "1.2.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.10.0",
+    "pug": "^2.0.3",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

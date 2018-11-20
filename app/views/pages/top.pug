@@ -1,0 +1,13 @@
+extends ../layout/_layout
+
+block vars
+  include ../config/_config
+  - var key = "top"
+  - var page = pages[key]
+
+block contents
+  .contents
+    h2 #{page.title}
+    .keyvisual_container
+      p.keyvisual_image
+        | a
