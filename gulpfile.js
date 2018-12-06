@@ -44,8 +44,13 @@ gulp.task('pug', (done) => {
   done();
 });
 
-gulp.task('gulpt', gulp.series('sass', 'pug', 'browser-sync'));
+if (process.env.NODE_ENV === 'production') {
+  gulp.task('gulpt:production', gulp.series('sass', 'pug'));
+} else {
+  gulp.task('gulpt:development', gulp.series('sass', 'pug', 'browser-sync'));
 
-gulp.watch(['./app/stylesheets/**'], gulp.task('sass'));
-gulp.watch(['./app/views/**'], gulp.task('pug'));
-gulp.watch('./dist/javascripts/**/*.js').on('change', browserSync.reload);
+  gulp.watch(['./app/stylesheets/**'], gulp.task('sass'));
+  gulp.watch(['./app/views/**'], gulp.task('pug'));
+  gulp.watch('./dist/javascripts/**/*.js').on('change', browserSync.reload);
+}
+
