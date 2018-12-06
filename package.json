@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run gulp\" \"npm run webpack\"",
-    "gulp": "gulp gulpt",
-    "webpack": "cross-env NODE_ENV=development webpack --watch",
+    "dev": "concurrently \"npm run gulp:development\" \"npm run webpack:development\"",
+    "build": "concurrently \"npm run gulp:production\" \"npm run webpack:production\"",
+    "gulp:development": "cross-env NODE_ENV=development gulp gulpt:development",
+    "gulp:production": "cross-env NODE_ENV=production gulp gulpt:production",
+    "webpack:development": "cross-env NODE_ENV=development webpack --watch",
+    "webpack:production": "cross-env NODE_ENV=production webpack",
     "pug": "pug ./app/views --out ./.tmp --watch --pretty"
   },
   "license": "MIT",
