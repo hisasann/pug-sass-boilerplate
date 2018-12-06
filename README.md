@@ -10,10 +10,16 @@ $ yarn
 
 ## Run
 
-### watch and build
+### watch with development mode
 
 ```bash
 $ yarn dev
+```
+
+### build with production mode
+
+```bash
+$ yarn build
 ```
 
 ## Maintainers
