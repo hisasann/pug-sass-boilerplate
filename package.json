@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "concurrently \"npm run gulp\" \"npm run webpack\"",
     "gulp": "gulp gulpt",
-    "webpack": "cross-env NODE_ENV=development webpack --watch"
+    "webpack": "cross-env NODE_ENV=development webpack --watch",
+    "pug": "pug ./app/views --out ./.tmp --watch --pretty"
   },
   "license": "MIT",
   "devDependencies": {
